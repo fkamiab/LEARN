@@ -3,21 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package datastructures;
+package arraysandstrings;
 
 /**
  *
  * @author Farbod.Kamiab
  */
-public class DataStructures {
+public class ArraysAndStrings {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+               
         
-        try {
-            //System.out.println(args[0]);
+        try {       
             string_unique_carr alex = new string_unique_carr(args[0]);
             boolean answer = alex.has_unique();            
         } catch (RuntimeException e) {
