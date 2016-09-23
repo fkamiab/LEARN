@@ -6,23 +6,51 @@
 package arraysandstrings;
 
 /**
- *
+ * A collection of methods useful for answering the question: 
+ * Implement an algorithm to determine if a string has all unique characters. 
+ * What if you can not use additional data structures?
+ * The class is initialized by specifying the string.
  * @author Farbod.Kamiab
  */
+
+
 public class string_unique_carr {
     String input_string;
     
-    string_unique_carr(String a){
+    
+   /**
+    * Initialization by specifying the string.
+    * @param a The input string.
+    * @author Farbod.Kamiab
+    */
+    public string_unique_carr(String a){
         input_string = a;
     }
     
+    /**
+     * Simply prints the input string defined when the class is initialized.
+     * @author Farbod.Kamiab
+     */
     public void print_input_string(){
         System.out.println(input_string);
     }
     
+    /**
+     * Splits the input string into an array of characters.
+     * @author Farbod.Kamiab
+     * @return Character array.
+     */
     public char[] split_char(){
         return input_string.toCharArray();
     }
+    
+    
+    /**
+     * This method, takes the string, splits it into characters. Then starting 
+     * from first character, inspects every character after until it detects repetition.
+     * The number of steps taken in order to reach the answer and the answer are printed out.
+     * @return The answer is a boolean, whether the string has unique characters or not. 
+     */
     
     public boolean has_unique(){
         char[] split_array = split_char();

@@ -6,7 +6,7 @@
 package arraysandstrings;
 
 /**
- *
+ * Practicing various problems regarding arrays and strings in Java.
  * @author Farbod.Kamiab
  */
 public class ArraysAndStrings {
@@ -18,8 +18,8 @@ public class ArraysAndStrings {
                
         
         try {       
-            string_unique_carr alex = new string_unique_carr(args[0]);
-            boolean answer = alex.has_unique();            
+            string_unique_carr problem_1 = new string_unique_carr(args[0]);
+            boolean answer = problem_1.has_unique();            
         } catch (RuntimeException e) {
             System.out.println("No argument provided.");
             System.exit(0);               
