@@ -19,7 +19,8 @@ public class ArraysAndStrings {
         
         try {       
             string_unique_carr problem_1 = new string_unique_carr(args[0]);
-            boolean answer = problem_1.has_unique();            
+            //boolean answer = problem_1.has_unique();       
+            boolean answer2=problem_1.isUniqueChars2();
         } catch (RuntimeException e) {
             System.out.println("No argument provided.");
             System.exit(0);               

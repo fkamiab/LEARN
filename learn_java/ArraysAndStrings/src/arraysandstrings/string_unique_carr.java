@@ -5,6 +5,8 @@
  */
 package arraysandstrings;
 
+import java.util.Arrays;
+
 /**
  * A collection of methods useful for answering the question: 
  * Implement an algorithm to determine if a string has all unique characters. 
@@ -15,9 +17,7 @@ package arraysandstrings;
 
 
 public class string_unique_carr {
-    String input_string;
-    
-    
+    String input_string;    
    /**
     * Initialization by specifying the string.
     * @param a The input string.
@@ -50,8 +50,7 @@ public class string_unique_carr {
      * from first character, inspects every character after until it detects repetition.
      * The number of steps taken in order to reach the answer and the answer are printed out.
      * @return The answer is a boolean, whether the string has unique characters or not. 
-     */
-    
+     */    
     public boolean has_unique(){
         char[] split_array = split_char();
         int length = split_array.length;
@@ -69,15 +68,44 @@ public class string_unique_carr {
                     System.out.println("The string does not have unique characters.");
                     System.out.println("Number of steps were " + (step_counter+1));
                     return false;
-                }
-                
+                }                
                 step_counter = step_counter+1;
-            } 
-            
-           
+            }                        
         }
         System.out.println("The string has unique characters");
         System.out.println("Number of steps were " + step_counter);
         return true;
     }
+    
+    
+   /**
+    * 
+    * @return boolean
+    */
+    public boolean isUniqueChars2() {
+        int step_counter=0;
+        int val=0;
+        boolean[] char_set = new boolean[256];
+        
+        for (int i = 0; i < input_string.length(); i++) {
+            System.out.println(Arrays.toString(char_set));
+            step_counter=step_counter+1;            
+            val = input_string.charAt(i);            
+            if (char_set[val]) {
+                System.out.println("The string does not have unique characters.");
+                System.out.println("Number of steps were " + step_counter);
+                return false;
+            }
+            
+            char_set[val] = true;
+            
+        }
+            
+        
+        System.out.println("The string has unique characters");
+        System.out.println("Number of steps were " + step_counter);
+        return true;
+    }
+    
+    
 }
